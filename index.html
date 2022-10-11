@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KLAYRich</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Noto+Sans:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* common */
+      body {
+        z-index: 10;
+        font-family: "Noto Sans", sans-serif;
+        background: url("./images/bg_whole.png") no-repeat center center;
+        background-size: cover;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      p {
+        color: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      .bold {
+        font-weight: 700;
+      }
+      .font_name {
+        font-size: 40px;
+        letter-spacing: 4px;
+        margin-top: 10px;
+        line-height: 37px;
+      }
+      .font_perc {
+        font-size: 140px;
+        color: #ef8727;
+        font-weight: 900;
+        line-height: 142px;
+      }
+      .font_name,
+      .font_perc {
+        font-family: "Montserrat", sans-serif;
+      }
+      .font_18px {
+        font-size: 18px;
+      }
+      .font_20px {
+        font-size: 20px;
+        word-spacing: 2px;
+        margin: 38px auto;
+        line-height: 27px;
+      }
+      .font_24px {
+        color: black;
+        font-size: 24px;
+        margin: 40px auto;
+      }
+      .font_32px,
+      .font_item,
+      .font_comming {
+        font-size: 32px;
+      }
+      .font_item {
+        color: #4f3b86;
+        margin: 24px;
+        font-weight: bold;
+      }
+      .font_comming {
+        color: #4f3b86;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        line-height: 37px;
+      }
+      .font_50px {
+        color: #4f3b86;
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: 21px;
+      }
+      .btn_front,
+      .btn_back {
+        height: 80px;
+        border-radius: 16px;
+        background-color: #ef8727;
+        border: none;
+        color: #ffffffe9;
+        font-size: 24px;
+        font-weight: 400;
+      }
+      .btn_front {
+        width: 351px;
+        margin-top: 30px;
+      }
+      .btn_back {
+        width: 933px;
+        margin-top: 78px;
+      }
+      .btn_front:hover,
+      .btn_back:hover {
+        cursor: pointer;
+        box-shadow: 7px 7px 10px #ef88275b;
+      }
+      /* main */
+      .main {
+        margin: 0 auto;
+        min-width: 1440px;
+        min-height: 2160px;
+        height: 2160px;
+        display: block;
+        position: relative;
+      }
+      .main::before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(
+          rgba(255, 255, 255, 0),
+          white,
+          rgba(255, 255, 255, 0)
+        );
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+      }
+      .wrapper_top {
+        min-width: 1440px;
+        /* max-width: 1440px; */
+        height: 1080px;
+        margin: 0 auto;
+        background: url("./images/bg_top.png") no-repeat center center;
+        background-size: cover;
+      }
+      .wrapper_bottom {
+        min-width: 1440px;
+        height: 1080px;
+        margin: 0 auto;
+        background: url("./images/bg_bottom.png") no-repeat center center;
+        background-size: cover;
+      }
+      .container {
+        position: relative;
+        width: 1200px;
+        height: auto;
+        margin: 0 auto;
+        /* border: 1px solid red;  */
+      }
+      .inner {
+        height: 1030px;
+        /* border: 1px solid #000;  */
+        text-align: center;
+      }
+      .dp_flex {
+        display: flex;
+      }
+      .left {
+        width: 540px;
+        height: 464px;
+        margin-top: 250px;
+      }
+      .left_text {
+        margin-top: 90px;
+      }
+      .right {
+        width: 660px;
+        height: 900px;
+        margin-top: 60px;
+        object-fit: cover;
+        background: none;
+      }
+      .right .img {
+        object-fit: cover;
+      }
+      .title {
+        height: 170px;
+        margin-top: 72px;
+        line-height: 32px;
+        color: #4f3b86;
+      }
+      .content {
+        display: grid;
+        grid-template-columns: 260px 260px 260px;
+        grid-template-rows: 418px;
+        column-gap: 80px;
+        justify-content: center;
+        width: 1200px;
+        height: 485px;
+        margin-top: 25px;
+      }
+      .item {
+        background-color: white;
+        line-height: 25px;
+        border-radius: 18px;
+        box-shadow: 0px 0px 11px 6px rgba(103, 102, 104, 0.123);
+      }
+      .item .item_img {
+        margin-top: 20px;
+        margin-left: 29px;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="wrapper_top">
+        <div class="container">
+          <div class="inner dp_flex">
+            <div class="left">
+              <div class="left_text">
+                <span class="font_name bold">KLAY</span
+                ><span class="font_name">Rich</span>
+                <p class="font_perc">100%</p>
+                <p class="font_50px">Onchain</p>
+                <p class="font_20px">
+                  어떻게 플레이해도 쉽고 즐거운 게임.<br />암호화폐 보너스는
+                  덤!<br />지금 플레이 해 보세요.
+                </p>
+              </div>
+              <button class="btn_front">
+                <!-- 링크를 넣어주세요 -->
+                <a href="javascript:void(0)">Play Now</a>
+              </button>
+            </div>
+            <div class="right">
+              <img src="./images/ld_img.png" alt="KLAYRich" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper_bottom">
+        <div class="container">
+          <div class="inner">
+            <div class="title">
+              <p class="font_50px">KLAYRich는 안전합니다.</p>
+              <p class="font_24px">
+                그 누구도 조작 할 수 없는 100% 온체인 서비스! <br />
+                사실 믿음직해서 더 좋습니다.
+              </p>
+            </div>
+            <div class="content">
+              <div class="item">
+                <p class="item_img">
+                  <img src="./images/dice.png" alt="DICE" />
+                </p>
+                <p class="font_item">Dice</p>
+                <p class="font_18px">
+                  주사위를 굴려굴려~<br />짜릿한 스릴과 함께<br />암호화폐
+                  보너스까지!
+                </p>
+              </div>
+              <div class="item">
+                <p class="item_img">
+                  <img src="./images/lottery.png" alt="lottery" />
+                </p>
+                <p class="font_item">Lottery</p>
+                <p class="font_18px">
+                  오늘 보너스의 주인공은<br />과연 누구일까요?<br />혹시...당신?
+                </p>
+              </div>
+              <div class="item">
+                <p class="item_img">
+                  <img src="./images/coming.png" alt="comming" />
+                </p>
+                <p class="font_comming">Dungeon of<br />Courage</p>
+                <p class="font_18px">
+                  당신의 도전정신은<br />어디까지 인가요?<br />
+                </p>
+              </div>
+              <button class="btn_back">
+                <!-- 링크를 넣어주세요 -->
+                <a href="javascript:void(0)">Play Now</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
